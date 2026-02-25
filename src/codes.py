@@ -35,7 +35,7 @@ class KnowledgeBase:
     def _construct_entries(self):
         df = pl.read_csv(self.file_path)
         if "description_aliases" not in df.columns:
-            df = df.with_columns(pl.col("description").alias("description_aliases")) #no description aliases exist yet
+            df = df.with_columns(pl.col("description").alias("description_aliases")) #no description aliases exist yet so add a column with the description
         return [ICD10Code(code, description, description_aliases, category, chapter) for code, description, description_aliases, category, chapter in zip(df["ICD10-CM-CODE"], df["description"], df["description_aliases"], df["category_code"], df["chapter"])]
 
 

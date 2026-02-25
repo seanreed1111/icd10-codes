@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.definitivehc.com)",
+      "Bash(head:*)",
+      "Bash(py:*)",
+      "Bash(tail:*)",
+      "WebSearch",
+      "WebFetch(domain:www.cms.gov)",
+      "WebFetch(domain:www.cdc.gov)",
+      "WebFetch(domain:ftp.cdc.gov)",
+      "Bash(cd:*)",
+      "Bash(wc:*)",
+      "Skill(create_gitignore)"
+    ]
+  }
+}

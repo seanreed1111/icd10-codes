@@ -1,0 +1,212 @@
+icd10_code,description,source
+U071,COVID-19,website
+G9341,Metabolic encephalopathy,website
+N390,"Urinary tract infection, site not specified",website
+Z471,Aftercare following joint replacement surgery,website
+A419,"Sepsis, unspecified organism",website
+J189,"Pneumonia, unspecified organism",website
+G20,Parkinson's disease,website
+Z4789,Encounter for other orthopedic aftercare,website
+G9340,"Encephalopathy, unspecified",website
+J449,"Chronic obstructive pulmonary disease, unspecified",website
+J9601,Acute respiratory failure with hypoxia,website
+I639,"Cerebral infarction, unspecified",website
+F0390,"Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety",website
+M6259,"Muscle wasting and atrophy, not elsewhere classified, multiple sites",website
+I69354,Hemiplegia and hemiparesis following cerebral infarction affecting left non-dominant side,website
+J441,Chronic obstructive pulmonary disease with (acute) exacerbation,website
+N179,"Acute kidney failure, unspecified",website
+S72002D,"Fracture of unspecified part of neck of left femur, subsequent encounter for closed fracture with routine healing",website
+S72001D,"Fracture of unspecified part of neck of right femur, subsequent encounter for closed fracture with routine healing",website
+I69351,Hemiplegia and hemiparesis following cerebral infarction affecting right dominant side,website
+Z48815,Encounter for surgical aftercare following surgery on the digestive system,website
+Z4781,Encounter for orthopedic aftercare following surgical amputation,website
+S72142D,"Displaced intertrochanteric fracture of left femur, subsequent encounter for closed fracture with routine healing",website
+I509,"Heart failure, unspecified",website
+R278,Other lack of coordination,website
+S72141D,"Displaced intertrochanteric fracture of right femur, subsequent encounter for closed fracture with routine healing",website
+I4891,Unspecified atrial fibrillation,website
+I5033,Acute on chronic diastolic (congestive) heart failure,website
+J9621,Acute and chronic respiratory failure with hypoxia,website
+M6282,Rhabdomyolysis,website
+G309,"Alzheimer's disease, unspecified",website
+N186,End stage renal disease,website
+Z48812,Encounter for surgical aftercare following surgery on the circulatory system,website
+I214,Non-ST elevation (NSTEMI) myocardial infarction,website
+F0391,"Unspecified dementia, unspecified severity, with behavioral disturbance",website
+E119,Type 2 diabetes mellitus without complications,website
+L03115,Cellulitis of right lower limb,website
+R55,Syncope and collapse,website
+L03116,Cellulitis of left lower limb,website
+I6930,Unspecified sequelae of cerebral infarction,website
+G35,Multiple sclerosis,website
+I2510,Atherosclerotic heart disease of native coronary artery without angina pectoris,website
+I5023,Acute on chronic systolic (congestive) heart failure,website
+I480,Paroxysmal atrial fibrillation,website
+J690,Pneumonitis due to inhalation of food and vomit,website
+D649,"Anemia, unspecified",website
+I69398,Other sequelae of cerebral infarction,website
+E871,Hypo-osmolality and hyponatremia,website
+H55,Nystagmus and other irregular eye movements to c H55.0Nystagmus esU SH55.00 Unspecified nystagmus Excludes ot H55.01 Congenital nystagmus An,optum
+H55.02,Latent nystagmus woH indicates,optum
+H55.03,Visual deprivation nystagmus it,optum
+H55.04,Dissociated nystagmus Therefore,optum
+H55.09,"Other forms of nystagmus acceptable supported The portion of the code description that appears in green font in the tabular list helps the coder quickly identify the key terms and the correct Note code. This convention is especially useful when the codes describe The laterality, such as the following codes from subcategory H40.22: information. instructions d H40.22Chronic angle-closure glaucoma Chronic primary angle-closure glaucoma Code",optum
+H40.221,"Chronic angle-closure glaucoma, right eye These",optum
+H40.222,"Chronic angle-closure glaucoma, left eye appear",optum
+H40.223,"Chronic angle-closure glaucoma, bilateral etiology/manifestation",optum
+H40.229,"Chronic angle-closure glaucoma, unspecified that eye picture Tabular Notations In notations are provided at the chapter, code block, category, subcategory, situations, and individual code level to help the user assign proper codes. The description information in the notation can apply to one or more codes depending on and where the citation is placed. Code A required vi",optum
+Z46.2,"implantedZ45.42 orthopedicNECZ47.89 postprocedural—seeAftercare,followingsurgery After-cataract—seeCataract,secondary Agalactia(primary)O92.3 elective,secondaryortherapeuticO92.5 Agammaglobulinemia(acquired(secondary)(nonfamil- ial)D80.1 with immunoglobulin-bearingB-lymphocytesD80.1 lymphopeniaD81.9 autosomalrecessive(Swisstype)D80.0 Bruton'sX-linkedD80.0 commonvariable(CVAgamma)D80.1 congenitalsex-linkedD80.0 hereditaryD80.0 lymphopenicD81.9 Swisstype(autosomalrecessive)D80.0 X-linked(withgrowthhormonedeficiency)(Bruton)",optum
+D80.0,"Aganglionosis(bowel)(colon)Q43.1 Age(old)—seeSenility Agenesis adrenal(gland)Q89.1 alimentarytract(complete)(partial)NECQ45.8 upperQ40.8 anus,anal(canal)Q42.3 withfistulaQ42.2 aortaQ25.41 appendixQ42.8 arm(complete)Q71.0-S withhandpresentQ71.1-S artery(peripheral)Q27.9 brainQ28.3 coronaryQ24.5 pulmonaryQ25.79 specifiedNECQ27.8 umbilicalQ27.0 auditory(canal)(external)Q16.1 auricle(ear)Q16.0 bileductorpassageQ44.5 bladderQ64.5 boneQ79.9 brainQ00.0 partofQ04.3 breast(withnipplepresent)Q83.8 withabsentnippleQ83.0 bronchusQ32.4 canaliculuslacrimalisQ10.4 carpus—seeAgenesis,hand 2Subtermsundermaintermsmaycontinuetonextcolumnorpage",optum
+I11.0,Hypertensive heart disease with heart failure,optum
+I50.1,"Left ventricular failure, unspecified Explanation: Without a diagnostic statement to the contrary, hypertension and heart failure have an assumed causal relationship, and a combination code should be used. An additional code to identify the type of heart failure (I50.-) should also be provided. 2) Hypertensive chronic kidneya disease Assign codes from category I12, Hypertensive chronic kidney disease, when both hypertension and a condition classifiable to category N18, Chronic kidney disease (CKD), are present. CKD should not be coded as hypertensive if the provider indicates the CKD is not related to the hypertensioSn. The appropriate code from category N18 should be used as a secondary code with a code from category I12 to identify the stage of chronic kidney disease. See Section I.C.14. Chronic kidney disease. If a patient has hypertensive chronic kidney disease and acute renal failure, an additional code for the acute renal failure is required. Patient is admitted with stage IV chronic kidney disease (CKD) due to polycystic kidney disease. Patient also is on lisinopril for hypertension.",optum
+N18.4,"Chronic kidney disease, stage 4 (severe)",optum
+Q61.3,"Polycystic kidney, unspecified",optum
+I10,"Essential (primary) hypertension Explanation: A combination code describing a relationship between hypertension and CKD is not used because the physician documentation identifies the polycystic kidney disease as the cause for the CKD. 3) Hypertensive heart and chronic kidney disease Assign codes from combination category I13, Hypertensive heart and chronic kidney disease, when there is hypertension with both heart and kidney involvement. If heart failure is present, assign an additional code from category I50 to identify the type of heart failure. The appropriate code from category N18, Chronic kidney disease, should be used as a secondary code with a code from category I13 to identify the stage of chronic kidney disease. See Section I.C.14. Chronic kidney disease. The codes in category I13, Hypertensive heart and chronic kidney disease, are combination codes that include hypertension, heart disease and chronic kidney disease. The Includes note at I13 specifies that the conditions included at I11 and I12 are included together in I13. If a patient",optum
+I13.0,"Hypertensive heart and chronic kidney disease with the heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease Circulatory",optum
+N18.2,"Chronic kidney disease, stage 2 (mild) Explanation: Combination codes in category I13 are used to report e conditions classifiable to both categories I11 and I12. Do not report System conditions classifiable to I11 and I12 separately. Use additional codes to report type of heart failure and stage of CKD. 4) Hypertensive cerebrovascular disease Folr hypertensive cerebrovascular disease, first assign the appropriate code from categories I60-I69, followed by the appropriate hypertension code. 5) Hypertensive retinopathy Subcategory H35.0, Background retinopathy and retinal vascular changes, should be used with a code from category I10 – I15, Hypertensive disease to include the systemic hypertension. The sequencing is based on the reason for the encounter. Hypertensive retinopathy of the right eye",optum
+H35.031,"Hypertensive retinopathy, right eye",optum
+I15,to identify the hypertension. Sequencing of codes is determined by the reason for admission/encounter. Renovascular hypertension due to renal artery atherosclerosis,optum
+I15.0,Renovascular hypertension,optum
+I70.1,"Atherosclerosis of renal artery Explanation: Secondary hypertension requires two codes: a code to identify the etiology and the appropriate I15 code. 7) Hypertension, transient Assign code R03.0, Elevated blood pressure reading without diagnosis of hypertension, unless patient has an established diagnosis of hypertension. Assign code O13.-, Gestational [pregnancy-induced] hypertension without significant proteinuria, or O14.-, Pre-eclampsia, for transient hypertension of pregnancy. 8) Hypertension, controlled This diagnostic statement usually refers to an existing state of hypertension under control by therapy. Assign the appropriate code from categories I10-I15, Hypertensive diseases. 9) Hypertension, uncontrolled Uncontrolled hypertension may refer to untreated hypertension or hypertension not responding to current therapeutic regimen. In either case, assign the appropriate code from categories I10-I15, Hypertensive diseases. 10)Hypertensive crisis Assign a code from category I16, Hypertensive crisis, for documented hypertensive urgency, hypertensive emergency or unspecified hypertensive crisis. Code also any identified hypertensive disease (I10-I15). The sequencing is based on the reason for the encounter. 11)Pulmonary hypertension Pulmonary hypertension is classified to category I27, Other pulmonary heart diseases. For secondary pulmonary hypertension (I27.1, I27.2-), code also any associated conditions or adverse effects of drugs or toxins.",optum
+I60.3,Nontraumaticsubarachnoidhemorrhagefromposterior communicatingartery,optum
+I60.30,Nontraumaticsubarachnoidhemorrhage fromunspecifiedposterior communicatingartery Non-traumaticbraininjury,optum
+I60.31,Nontraumaticsubarachnoidhemorrhage fromrightposteriorcommunicating artery Non-traumaticbraininjury,optum
+I60.32,Nontraumaticsubarachnoidhemorrhage fromleftposteriorcommunicatingartery Non-traumaticbraininjury,optum
+I60.4,Nontraumaticsubarachnoidhemorrhagefrom basilarartery braininjury,optum
+I60.5,Nontraumaticsubarachnoidhemorrhagefromvertebral artery,optum
+I60.50,Nontraumaticsubarachnoidhemorrhage fromunspecifiedvertebralartery Non-traumaticbraininjury,optum
+I60.51,Nontraumaticsubarachnoidhemorrhage fromrightvertebralartery p Non-traumaticbraininjury,optum
+I60.52,Nontraumaticsubarachnoidhemorrhage fromleftvertebralartery Non-traumaticbraininjury,optum
+I60.6,Nontraumaticsubarachnoidhemorrhagefrom m otherintracranialarteries braininjury,optum
+I60.7,"Nontraumaticsubarachnoidhemorrhagefrom unspecifiedintracranialartery Ruptured(congenital)berryaneurysm Ruptured(congenital)cerebralaneurysm Subarachnoidhemorrhage(nontraumatic)fromcerebralartery NOS a Subarachnoidhemorrhage(nontraumatic)fromcommunicating arteryNOS 1 berryaneurysm,nonruptured(I67.1) S braininjury",optum
+I60.8,Othernontraumaticsubarachnoidhemorrhage Meningealhemorrhage Ruptureofcerebralarteriovenousmalformation braininjury,optum
+I60.9,"Nontraumaticsubarachnoidhemorrhage, unspecified braininjury",optum
+I61,"Nontraumaticintracerebralhemorrhage 2 sequelaeofintracerebralhemorrhage(I69.1-) AHA:2017,2Q,9-10",optum
+I61.0,"Nontraumaticintracerebralhemorrhagein hemisphere,subcortical Deepintracerebralhemorrhage(nontraumatic) AHA:2016,4Q,27 braininjury",optum
+I61.1,"Nontraumaticintracerebralhemorrhagein hemisphere,cortical Cerebrallobehemorrhage(nontraumatic) Superficialintracerebralhemorrhage(nontraumatic) braininjury",optum
+I61.2,"Nontraumaticintracerebralhemorrhagein hemisphere,unspecified braininjury SAdditional Character Req g Placeholder Alert 8 Newborn: 0 9 Pediatric: 0-17 x",optum
+I61.3,Nontraumaticintracerebralhemorrhageinbrain stem Chapter9.DiseasesoftheCirculatorySystem braininjury,optum
+I61.4,Nontraumaticintracerebralhemorrhagein cerebellum braininjury,optum
+I61.5,"Nontraumaticintracerebralhemorrhage, intraventricular braininjury",optum
+I61.6,"Nontraumaticintracerebralhemorrhage,multiple localized braininjury",optum
+I61.8,Othernontraumaticintracerebralhemorrhage braininjury,optum
+I61.9,"Nontraumaticintracerebralhemorrhage, e unspecified braininjury",optum
+I62,Otherandunspecifiednontraumaticintracranialhemorrhage 2 sequelaeofintracranialhemorrhage(I69.2) c l I62.0 Nontraumaticsubduralhemorrhage,optum
+I62.00,"Nontraumaticsubduralhemorrhage, unspecified Non-traumaticbraininjury",optum
+I62.01,Nontraumaticacutesubdural hemorrhage Non-traumaticbraininjury,optum
+I62.02,Nontraumaticsubacutesubdural hemorrhage Non-traumaticbraininjury,optum
+I62.03,Nontraumaticchronicsubdural hemorrhage Non-traumaticbraininjury,optum
+I62.1,Nontraumaticextraduralhemorrhage Nontraumaticepiduralhemorrhage braininjury,optum
+I62.9,"Nontraumaticintracranialhemorrhage, % unspecified",optum
+I63,"Cerebralinfarction 1 occlusionandstenosisofcerebralandprecerebralarteries, resultingincerebralinfarction Useadditionalcode,ifapplicable,toidentifystatuspostadministration oftPA(rtPA)inadifferentfacilitywithinthelast24hourspriorto admissiontocurrentfacility(Z92.82) Useadditionalcode,ifknown,toindicateNationalInstitutesofHealth StrokeScale(NIHSS)score(R29.7-) 2 sequelaeofcerebralinfarction(I69.3-) AHA:2017,2Q,9-10;2016,4Q,28,61-62;2014,1Q,23",optum
+I63.0,Cerebralinfarctionduetothrombosisofprecerebralarteries,optum
+I63.00,Cerebralinfarctionduetothrombosisof unspecifiedprecerebralartery,optum
+I63.01,Cerebralinfarctionduetothrombosisofvertebral artery,optum
+I63.011,Cerebralinfarctiondueto thrombosisofrightvertebral artery,optum
+I63.012,Cerebralinfarctiondueto thrombosisofleftvertebral artery I60.3–I63.013,optum
+I63.013,Cerebralinfarctiondueto thrombosisofbilateral vertebralarteries Maternity: 12-55 y Adult: 15-124 wxRevisedText lNewCode sRevisedCodeTitle,optum
+M71.0,"Abscessofbursa Useadditionalcode(B95.-,B96.-)toidentifycausativeorganism",optum
+M71.00,"Abscessofbursa,unspecifiedsite",optum
+M71.01,"Abscessofbursa,shoulder",optum
+M71.011,"Abscessofbursa,rightshoulder",optum
+M71.012,"Abscessofbursa,leftshoulder",optum
+M71.019,"Abscessofbursa,unspecifiedshoulder",optum
+M71.02,"Abscessofbursa,elbow",optum
+M71.021,"Abscessofbursa,rightelbow",optum
+M71.022,"Abscessofbursa,leftelbow",optum
+M71.029,"Abscessofbursa,unspecifiedelbow",optum
+M71.03,"Abscessofbursa,wrist",optum
+M71.031,"Abscessofbursa,rightwrist",optum
+M71.032,"Abscessofbursa,leftwrist",optum
+M71.039,"Abscessofbursa,unspecifiedwrist",optum
+M71.04,"Abscessofbursa,hand",optum
+M71.041,"Abscessofbursa,righthand",optum
+M71.042,"Abscessofbursa,lefthand",optum
+M71.049,"Abscessofbursa,unspecifiedhand",optum
+M71.05,"Abscessofbursa,hip",optum
+M71.051,"Abscessofbursa,righthip",optum
+M71.052,"Abscessofbursa,lefthip p",optum
+M71.059,"Abscessofbursa,unspecifiedhip",optum
+M71.06,"Abscessofbursa,knee",optum
+M71.061,"Abscessofbursa,rightknee",optum
+M71.062,"Abscessofbursa,leftknee",optum
+M71.069,"Abscessofbursa,unspecifiedknee m",optum
+M71.07,"Abscessofbursa,ankleandfoot",optum
+M71.071,"Abscessofbursa,rightankleandfoot",optum
+M71.072,"Abscessofbursa,leftankleandfoot",optum
+M71.079,"Abscessofbursa,unspecifiedankleand foot",optum
+M71.08,"Abscessofbursa,othersite",optum
+M71.09,"Abscessofbursa,multiplesites",optum
+M71.1,"Otherinfectivebursitis a Useadditionalcode(B95.-,B96.-)toidentifycausativeorganism",optum
+M71.10,"Otherinfectivebursitis,unspecifiedsite",optum
+M71.11,"Otherinfectivebursitis,shoulder",optum
+M71.111,"Otherinfectivebursitis,rightshoulder",optum
+M71.112,"Otherinfectivebursitis,leftshoulder",optum
+M71.119,"Otherinfectivebursitis,unspecified shoulder",optum
+M71.12,"Otherinfectivebursitis,elbow",optum
+M71.121,"Otherinfectivebursitis,rightelbow",optum
+M71.122,"Otherinfectivebursitis,leftelbow",optum
+M71.129,"Otherinfectivebursitis,unspecified elbow",optum
+M71.13,"Otherinfectivebursitis,wrist",optum
+M71.131,"Otherinfectivebursitis,rightwrist",optum
+M71.132,"Otherinfectivebursitis,leftwrist",optum
+M71.139,"Otherinfectivebursitis,unspecifiedwrist",optum
+M71.14,"Otherinfectivebursitis,hand",optum
+M71.141,"Otherinfectivebursitis,righthand",optum
+M71.142,"Otherinfectivebursitis,lefthand",optum
+M71.149,"Otherinfectivebursitis,unspecifiedhand",optum
+M71.15,"Otherinfectivebursitis,hip",optum
+M71.151,"Otherinfectivebursitis,righthip",optum
+M71.152,"Otherinfectivebursitis,lefthip",optum
+M71.159,"Otherinfectivebursitis,unspecifiedhip",optum
+M71.16,"Otherinfectivebursitis,knee",optum
+M71.161,"Otherinfectivebursitis,rightknee",optum
+M71.162,"Otherinfectivebursitis,leftknee 134.17M–17M M71.169 Otherinfectivebursitis,unspecifiedknee",optum
+M71.17,"Otherinfectivebursitis,ankleandfoot",optum
+M71.171,"Otherinfectivebursitis,rightankleand foot",optum
+M71.172,"Otherinfectivebursitis,leftankleand foot",optum
+M71.179,"Otherinfectivebursitis,unspecifiedankle andfoot",optum
+M71.18,"Otherinfectivebursitis,othersite TNon-therapyAncillary SSpeech-LanguagePathology ICDiagnosis uPrimaryDiagnosis",optum
+M71.19,"Otherinfectivebursitis,multiplesites",optum
+M71.2,"Synovialcystofpoplitealspace[Baker] 1 synovialcystofpoplitealspacewithrupture(M66.0) DEF:Sacfilledwithclearsynovialfluidinadults,usuallysecondary todiseaseinsidethejoint,locatedonthebackofthekneeinthe poplitealfossaarea.Inchildren,thecystusuallyrepresentsa ganglionofoneofthetendonsintheknee. Baker’s Cyst e Baker’s l cyst connected to knee joint synovial cavity",optum
+M71.20,"Synovialcystofpoplitealspace[Baker],unspecified knee",optum
+M71.21,"Synovialcystofpoplitealspace[Baker],rightknee",optum
+M71.22,"Synovialcystofpoplitealspace[Baker],leftknee",optum
+M71.3,Otherbursalcyst SynovialcystNOS 1 synovialcystwithrupture(M66.1-),optum
+M71.30,"Otherbursalcyst,unspecifiedsite",optum
+M71.31,"Otherbursalcyst,shoulder",optum
+M71.311,"Otherbursalcyst,rightshoulder",optum
+M71.312,"Otherbursalcyst,leftshoulder",optum
+M71.319,"Otherbursalcyst,unspecifiedshoulder",optum
+M71.32,"Otherbursalcyst,elbow",optum
+M71.321,"Otherbursalcyst,rightelbow",optum
+M71.322,"Otherbursalcyst,leftelbow",optum
+M71.329,"Otherbursalcyst,unspecifiedelbow",optum
+M71.33,"Otherbursalcyst,wrist",optum
+M71.331,"Otherbursalcyst,rightwrist",optum
+M71.332,"Otherbursalcyst,leftwrist",optum
+M71.339,"Otherbursalcyst,unspecifiedwrist",optum
+M71.34,"Otherbursalcyst,hand",optum
+M71.341,"Otherbursalcyst,righthand",optum
+M71.342,"Otherbursalcyst,lefthand",optum
+M71.349,"Otherbursalcyst,unspecifiedhand",optum
+M71.35,"Otherbursalcyst,hip",optum
+M71.351,"Otherbursalcyst,righthip",optum
+M71.352,"Otherbursalcyst,lefthip",optum
+M71.359,"Otherbursalcyst,unspecifiedhip",optum
+M71.37,"Otherbursalcyst,ankleandfoot",optum
+M71.371,"Otherbursalcyst,rightankleandfoot",optum
+M71.372,"Otherbursalcyst,leftankleandfoot",optum
+M71.379,"Otherbursalcyst,unspecifiedankleand foot",optum
+M71.38,"Otherbursalcyst,othersite",optum
+M71.39,"Otherbursalcyst,multiplesites",optum
+M71.4,Calciumdepositinbursa 2 calciumdepositinbursaofshoulder(M75.3),optum
+M71.40,"Calciumdepositinbursa,unspecifiedsite",optum
+M71.42,"Calciumdepositinbursa,elbow",optum
+M71.421,"Calciumdepositinbursa,rightelbow",optum
+M71.422,"Calciumdepositinbursa,leftelbow",optum
+M71.429,"Calciumdepositinbursa,unspecified elbow",optum
+M71.43,"Calciumdepositinbursa,wrist",optum
+M71.431,"Calciumdepositinbursa,rightwrist ARICCCCondition Manifestation UnspecifiedDx",optum
+S62.102A,Fracture of unspecified encounter,ltc

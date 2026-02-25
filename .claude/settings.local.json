@@ -11,7 +11,9 @@
       "WebFetch(domain:ftp.cdc.gov)",
       "Bash(cd:*)",
       "Bash(wc:*)",
-      "Skill(create_gitignore)"
+      "Skill(create_gitignore)",
+      "Bash(cd /c/Users/sqr99/NewPythonProjects/Interviews/anthuria-project && uv run ty check 2>&1)",
+      "WebFetch(domain:docs.astral.sh)"
     ]
   }
 }

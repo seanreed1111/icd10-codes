@@ -1,0 +1,11 @@
+ICD10-CM-CODE,description,category_code,category_description,section,chapter,description_aliases
+A000,"Cholera due to Vibrio cholerae 01, biovar cholerae",A00,Cholera,A00-A09,1,"Cholera due to Vibrio cholerae 01, biovar cholerae"
+A001,"Cholera due to Vibrio cholerae 01, biovar eltor",A00,Cholera,A00-A09,1,"Cholera due to Vibrio cholerae 01, biovar eltor"
+A009,"Cholera, unspecified",A00,Cholera,A00-A09,1,"Cholera, unspecified"
+A0100,"Typhoid fever, unspecified",A01,Typhoid and paratyphoid fevers,A00-A09,1,"Typhoid fever, unspecified"
+A0101,Typhoid meningitis,A01,Typhoid and paratyphoid fevers,A00-A09,1,Typhoid meningitis
+A0102,Typhoid fever with heart involvement,A01,Typhoid and paratyphoid fevers,A00-A09,1,Typhoid fever with heart involvement
+A0103,Typhoid pneumonia,A01,Typhoid and paratyphoid fevers,A00-A09,1,Typhoid pneumonia
+A0104,Typhoid arthritis,A01,Typhoid and paratyphoid fevers,A00-A09,1,Typhoid arthritis
+A0105,Typhoid osteomyelitis,A01,Typhoid and paratyphoid fevers,A00-A09,1,Typhoid osteomyelitis
+A0109,Typhoid fever with other complications,A01,Typhoid and paratyphoid fevers,A00-A09,1,Typhoid fever with other complications

@@ -104,7 +104,8 @@
       "WebFetch(domain:goodboychan.github.io)",
       "WebFetch(domain:www.capitalone.com)",
       "Bash(do echo:*)",
-      "Bash(PYTHONPATH=src uv run:*)"
+      "Bash(PYTHONPATH=src uv run:*)",
+      "Bash(shuf:*)"
     ]
   }
 }

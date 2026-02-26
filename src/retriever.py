@@ -49,7 +49,17 @@ class TfidfRetriever:
             )
 
         # Fit TF-IDF vectorizer on corpus
-        self._vectorizer = TfidfVectorizer(ngram_range=(1, 2), stop_words="english")
+        # token_pattern=r"(?u)\b(?:\w\w+|\d)\b"  matches either:
+        # - \w\w+ — two or more word characters (existing behavior)
+        # - \d — a single digit character
+
+        # So "type 1 diabetes" tokenizes as ["type", "1", "diabetes"],
+        # enabling the word-level bigrams "type 1" and "1 diabetes".
+        self._vectorizer = TfidfVectorizer(
+            ngram_range=(1, 2),
+            stop_words="english",
+            token_pattern=r"(?u)\b(?:\w\w+|\d)\b",
+        )
         self._corpus_matrix = self._vectorizer.fit_transform(self._descriptions)
 
     def search(self, query: str, top_k: int = 5) -> list[SearchResult]:

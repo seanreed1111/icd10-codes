@@ -8,12 +8,15 @@ dependencies = [
     "datasets>=4.6.0",
     "loguru>=0.7.3",
     "lxml>=6.0.2",
+    "numpy>=2.4.2",
     "pandas>=3.0.1",
     "pdfplumber>=0.11.9",
     "polars>=1.38.1",
     "pytest>=9.0.2",
     "requests>=2.32.5",
     "ruff>=0.15.2",
+    "scikit-learn>=1.8.0",
+    "scipy>=1.17.1",
     "ty>=0.0.18",
 ]
 

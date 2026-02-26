@@ -98,7 +98,12 @@
       "Bash(curl -s \"https://api.github.com/repos/3mcloud/MDACE\" | python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\('message',''\\) or f'exists: {d[\\\\\"full_name\\\\\"]}'\\)\" 2>&1)",
       "Bash(cp:*)",
       "Bash(wc:*)",
-      "Bash(mkdir -p /c/Users/sqr99/NewPythonProjects/Interviews/anthuria-project/data/COT-SYMP-ICD10-2024 && cd /c/Users/sqr99/NewPythonProjects/Interviews/anthuria-project && uv run python -c \"\nfrom datasets import load_dataset\nds = load_dataset\\('Inje/COT-SYMP-ICD10-2024'\\)\nprint\\('splits:', list\\(ds.keys\\(\\)\\)\\)\nfor split, data in ds.items\\(\\):\n    print\\(f'{split}: {len\\(data\\)} rows, columns: {data.column_names}'\\)\nds.save_to_disk\\('data/COT-SYMP-ICD10-2024'\\)\nprint\\('saved to disk'\\)\n\" 2>&1)"
+      "Bash(mkdir -p /c/Users/sqr99/NewPythonProjects/Interviews/anthuria-project/data/COT-SYMP-ICD10-2024 && cd /c/Users/sqr99/NewPythonProjects/Interviews/anthuria-project && uv run python -c \"\nfrom datasets import load_dataset\nds = load_dataset\\('Inje/COT-SYMP-ICD10-2024'\\)\nprint\\('splits:', list\\(ds.keys\\(\\)\\)\\)\nfor split, data in ds.items\\(\\):\n    print\\(f'{split}: {len\\(data\\)} rows, columns: {data.column_names}'\\)\nds.save_to_disk\\('data/COT-SYMP-ICD10-2024'\\)\nprint\\('saved to disk'\\)\n\" 2>&1)",
+      "WebFetch(domain:kavita-ganesan.com)",
+      "WebFetch(domain:www.analyticsvidhya.com)",
+      "WebFetch(domain:goodboychan.github.io)",
+      "WebFetch(domain:www.capitalone.com)",
+      "Bash(do echo:*)"
     ]
   }
 }

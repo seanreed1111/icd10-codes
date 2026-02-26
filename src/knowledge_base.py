@@ -35,17 +35,19 @@ class KnowledgeBase:
         self.file_path: Path = file_path
         self.entries: list[ICD10Code] = self._construct_entries()
 
-    def _construct_entries(self):
-        df = pl.read_csv(self.file_path)
+    # ------------------------------------------------------------------
+    # Internal construction
+    # ------------------------------------------------------------------
+
+    @staticmethod
+    def _entries_from_df(df: pl.DataFrame) -> list[ICD10Code]:
         if (
             "description_aliases" not in df.columns
-        ):  # no description aliases exist yet so add a temp column for now
+        ):  # no aliases yet; mirror description
             df = df.with_columns(pl.col("description").alias("description_aliases"))
         return [
             ICD10Code(code, description, description_aliases, category, chapter)
-            for code, description, description_aliases, category, chapter in zip[
-                tuple[str, str, list[str], Category, Chapter]
-            ](
+            for code, description, description_aliases, category, chapter in zip(
                 df["ICD10-CM-CODE"],
                 df["description"],
                 df["description_aliases"],
@@ -54,6 +56,35 @@ class KnowledgeBase:
                 strict=True,
             )
         ]
+
+    def _construct_entries(self) -> list[ICD10Code]:
+        df = pl.read_csv(self.file_path)
+        return KnowledgeBase._entries_from_df(df)
+
+    # ------------------------------------------------------------------
+    # Persistence
+    # ------------------------------------------------------------------
+
+    def save(self, path: Path) -> None:
+        """Serialise entries to a Parquet file for fast subsequent loads."""
+        pl.DataFrame(
+            {
+                "ICD10-CM-CODE": [e.code for e in self.entries],
+                "description": [e.description for e in self.entries],
+                "description_aliases": [e.description_aliases for e in self.entries],
+                "category_code": [e.category for e in self.entries],
+                "chapter": [e.chapter for e in self.entries],
+            }
+        ).write_parquet(path)
+
+    @classmethod
+    def load(cls, path: Path) -> "KnowledgeBase":
+        """Load a KnowledgeBase from a Parquet file written by :meth:`save`."""
+        obj = cls.__new__(cls)
+        obj.file_path = path
+        df = pl.read_parquet(path)
+        obj.entries = cls._entries_from_df(df)
+        return obj
 
 
 if __name__ == "__main__":

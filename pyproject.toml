@@ -60,8 +60,8 @@ replace-imports-with-any = ["bs4", "bs4.**", "lxml", "lxml.**", "pandas", "panda
 testpaths = ["tests"]
 pythonpath = ["src"]
 addopts = [
-    # pytest-xdist: run tests in parallel across all available CPUs
-    "-n auto",
+    # pytest-xdist: run tests in parallel across 6 cores of the CPU
+    "-n", "6",
     # pytest-html: generate a self-contained HTML report after each run
     "--html=reports/report.html",
     "--self-contained-html",

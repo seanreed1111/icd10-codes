@@ -1,0 +1,22 @@
+[
+  {"description": "other dental procedure status", "expected_code": "Z98818"},
+  {"description": "breast implant status", "expected_code": "Z9882"},
+  {"description": "filtering bleb after glaucoma surgery status", "expected_code": "Z9883"},
+  {"description": "bariatric surgery status", "expected_code": "Z9884"},
+  {"description": "transplanted organ removal status", "expected_code": "Z9885"},
+  {"description": "personal history of breast implant removal", "expected_code": "Z9886"},
+  {"description": "personal history of in utero procedure during pregnancy", "expected_code": "Z98870"},
+  {"description": "personal history of in utero procedure while a fetus", "expected_code": "Z98871"},
+  {"description": "other specified postprocedural states", "expected_code": "Z98890"},
+  {"description": "history of uterine scar from previous surgery", "expected_code": "Z98891"},
+  {"description": "dependence on aspirator", "expected_code": "Z990"},
+  {"description": "dependence on respirator ventilator status", "expected_code": "Z9911"},
+  {"description": "encounter for respirator dependence during power failure", "expected_code": "Z9912"},
+  {"description": "dependence on renal dialysis", "expected_code": "Z992"},
+  {"description": "dependence on wheelchair", "expected_code": "Z993"},
+  {"description": "dependence on supplemental oxygen", "expected_code": "Z9981"},
+  {"description": "dependence on other enabling machines and devices", "expected_code": "Z9989"},
+  {"description": "vaping-related disorder", "expected_code": "U070"},
+  {"description": "COVID-19", "expected_code": "U071"},
+  {"description": "post COVID-19 condition unspecified", "expected_code": "U099"}
+]

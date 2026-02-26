@@ -1,0 +1,42 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "cot-symp-icd10-2024",
+  "dataset_size": 8884498,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/Inje/COT-SYMP-ICD10-2024@94a0e3822d1df5f5f018a2626602e9ae2356cca1/data/train-00000-of-00001.parquet": {
+      "num_bytes": 4202532,
+      "checksum": null
+    }
+  },
+  "download_size": 4202532,
+  "features": {
+    "question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "answer": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 13087030,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 8884498,
+      "num_examples": 12132,
+      "dataset_name": "cot-symp-icd10-2024"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

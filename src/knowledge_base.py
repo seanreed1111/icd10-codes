@@ -78,7 +78,7 @@ class KnowledgeBase:
         ).write_parquet(path)
 
     @classmethod
-    def load(cls, path: Path) -> "KnowledgeBase":
+    def load_from_parquet(cls, path: Path) -> "KnowledgeBase":
         """Load a KnowledgeBase from a Parquet file written by :meth:`save`."""
         obj = cls.__new__(cls)
         obj.file_path = path

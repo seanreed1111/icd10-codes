@@ -22,12 +22,14 @@ def main() -> None:
     for batch in table.to_batches():
         questions = batch.column("question").to_pylist()
         answers = batch.column("answer").to_pylist()
-        for question, answer in zip(questions, answers):
-            records.append({
-                "question": question,
-                "answer": answer,
-                "code": extract_code(answer),
-            })
+        for question, answer in zip(questions, answers, strict=True):
+            records.append(
+                {
+                    "question": question,
+                    "answer": answer,
+                    "code": extract_code(answer),
+                }
+            )
 
     DEST.write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Wrote {len(records)} records to {DEST}")

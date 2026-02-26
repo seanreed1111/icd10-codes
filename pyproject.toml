@@ -13,8 +13,35 @@ dependencies = [
     "polars>=1.38.1",
     "pytest>=9.0.2",
     "requests>=2.32.5",
+    "ruff>=0.15.2",
     "ty>=0.0.18",
 ]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+exclude = [".venv", "venv", "__pycache__", ".git"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501",  # line too long (handled by formatter)
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["src"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
 
 [tool.ty.environment]
 python-version = "3.12"
@@ -25,3 +52,8 @@ unresolved-import = "ignore"
 
 [tool.ty.analysis]
 replace-imports-with-any = ["bs4", "bs4.**", "lxml", "lxml.**", "pandas", "pandas.**", "pdfplumber", "pdfplumber.**", "requests", "requests.**"]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.5.1",
+]

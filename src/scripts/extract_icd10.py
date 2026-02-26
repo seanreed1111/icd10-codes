@@ -31,14 +31,14 @@ ICD10_RE = re.compile(r"^([A-Z][0-9]{2,5}(?:\.[0-9]{1,4})?[A-Z]?)$")
 
 # Lines to discard from PDFs
 SKIP_PATTERNS = [
-    re.compile(r"RIC\s*Excl:", re.IGNORECASE),    # with or without space
-    re.compile(r"^\d+$"),                          # bare page numbers
+    re.compile(r"RIC\s*Excl:", re.IGNORECASE),  # with or without space
+    re.compile(r"^\d+$"),  # bare page numbers
     re.compile(r"copyright", re.IGNORECASE),
     re.compile(r"^Page\s+\d+", re.IGNORECASE),
     re.compile(r"optum", re.IGNORECASE),
     re.compile(r"^ICD-?10", re.IGNORECASE),
     re.compile(r"^©"),
-    re.compile(r"^\s*$"),                          # blank lines
+    re.compile(r"^\s*$"),  # blank lines
 ]
 
 # PDF encoding noise like %A, %B …
@@ -50,6 +50,7 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; ICD10Scraper/1.0)"}
 # ---------------------------------------------------------------------------
 # Helper utilities
 # ---------------------------------------------------------------------------
+
 
 def clean_description(text: str) -> str:
     """Strip PDF artifacts, collapse whitespace, strip edge punctuation."""
@@ -84,6 +85,7 @@ def _should_skip(line: str) -> bool:
 # ---------------------------------------------------------------------------
 # State machine for parsing lines from a PDF column
 # ---------------------------------------------------------------------------
+
 
 def _parse_lines(lines: list[str]) -> list[dict]:
     """
@@ -121,7 +123,7 @@ def _parse_lines(lines: list[str]) -> list[dict]:
             idx = 1
 
         first_tok = tokens[idx]
-        rest = " ".join(tokens[idx + 1:])
+        rest = " ".join(tokens[idx + 1 :])
 
         m = ICD10_RE.match(first_tok)
         if m:
@@ -139,6 +141,7 @@ def _parse_lines(lines: list[str]) -> list[dict]:
 # ---------------------------------------------------------------------------
 # Source 1: website scraper
 # ---------------------------------------------------------------------------
+
 
 def scrape_website(url: str) -> list[dict]:
     """
@@ -179,6 +182,7 @@ def scrape_website(url: str) -> list[dict]:
 # Source 2 & 3: PDF extractor
 # ---------------------------------------------------------------------------
 
+
 def _words_to_lines(words: list[dict], col_tolerance: float = 3.0) -> list[str]:
     """
     Group pdfplumber word dicts into text lines by proximity in y-coordinate.
@@ -189,7 +193,9 @@ def _words_to_lines(words: list[dict], col_tolerance: float = 3.0) -> list[str]:
         return []
 
     # Sort by vertical position first
-    words_sorted = sorted(words, key=lambda w: (round(w["top"] / col_tolerance), w["x0"]))
+    words_sorted = sorted(
+        words, key=lambda w: (round(w["top"] / col_tolerance), w["x0"])
+    )
 
     lines: list[list[dict]] = []
     current_group: list[dict] = [words_sorted[0]]
@@ -245,6 +251,7 @@ def extract_from_pdf(pdf_path: str, source_label: str) -> list[dict]:
 # Deduplication
 # ---------------------------------------------------------------------------
 
+
 def deduplicate(records: list[dict]) -> list[dict]:
     """
     Deduplicate by normalised ICD-10 code, keeping the first occurrence.
@@ -264,6 +271,7 @@ def deduplicate(records: list[dict]) -> list[dict]:
 # CSV writer
 # ---------------------------------------------------------------------------
 
+
 def write_csv(records: list[dict], output_path: str) -> None:
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w", newline="", encoding="utf-8") as fh:
@@ -275,6 +283,7 @@ def write_csv(records: list[dict], output_path: str) -> None:
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
+
 
 def main() -> None:
     all_records: list[dict] = []

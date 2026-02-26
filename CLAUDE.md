@@ -60,6 +60,24 @@ When returning a code lookup result, also return the category description and al
 | `data/raw/icd10_codes-simplified.csv` | Smaller set scraped/extracted by `extract_icd10.py` |
 | `tests/test_data.json` | Sample search test cases (`expected_code`, `condition`) |
 
+## Linting and formatting
+
+This project uses `ruff` via `pre-commit`. Hooks are installed with `uv run pre-commit install`.
+
+`.pre-commit-config.yaml` uses `id: ruff-check` (not the legacy alias `id: ruff`) plus `id: ruff-format`. The legacy `ruff` hook ID still works but prints a deprecation warning; always use `ruff-check` instead.
+
+```yaml
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.2
+    hooks:
+      - id: ruff-check   # linter (replaces legacy id: ruff)
+        args: [--fix]
+      - id: ruff-format  # formatter
+```
+
+Ruff config lives in `pyproject.toml` under `[tool.ruff]`. `.venv` is listed in `exclude` so third-party packages are never checked.
+
 ## Notes
 
 - `ty` (not mypy) is the type checker; config is in `pyproject.toml` under `[tool.ty]`. Several third-party packages (pandas, requests, bs4, etc.) are set to `replace-imports-with-any` to suppress unresolved-import errors.

@@ -18,7 +18,14 @@ dependencies = [
     "scikit-learn>=1.8.0",
     "scipy>=1.17.1",
     "ty>=0.0.18",
+    "typer>=0.24.1",
 ]
+
+[project.scripts]
+icd10-search = "cli:app"
+
+[tool.uv]
+package = true
 
 [tool.ruff]
 line-length = 88
@@ -62,12 +69,6 @@ pythonpath = ["src"]
 addopts = [
     # pytest-xdist: run tests in parallel across 2 cores of the CPU
     "-n", "2",
-    # pytest-html: generate a self-contained HTML report after each run
-    # "--html=reports/report.html",
-    # "--self-contained-html",
-    # pytest-benchmark: disable benchmarks in regular runs;
-    # re-enable ad hoc with: uv run pytest --benchmark-enable -n0
-    "--benchmark-disable",
 ]
 
 [dependency-groups]

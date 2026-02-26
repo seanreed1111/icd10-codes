@@ -1,2 +1,0 @@
-# Git analysis cache (created by analyze-git-contributions skill)
-.git-analysis-cache/

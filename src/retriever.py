@@ -5,7 +5,9 @@ from dataclasses import dataclass, field
 
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import linear_kernel
+from sklearn.metrics.pairwise import (
+    linear_kernel,  # same as cosine similarity when l2 normalized
+)
 
 from knowledge_base import KnowledgeBase
 

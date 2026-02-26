@@ -60,11 +60,11 @@ replace-imports-with-any = ["bs4", "bs4.**", "lxml", "lxml.**", "pandas", "panda
 testpaths = ["tests"]
 pythonpath = ["src"]
 addopts = [
-    # pytest-xdist: run tests in parallel across 6 cores of the CPU
+    # pytest-xdist: run tests in parallel across 2 cores of the CPU
     "-n", "2",
     # pytest-html: generate a self-contained HTML report after each run
-    "--html=reports/report.html",
-    "--self-contained-html",
+    # "--html=reports/report.html",
+    # "--self-contained-html",
     # pytest-benchmark: disable benchmarks in regular runs;
     # re-enable ad hoc with: uv run pytest --benchmark-enable -n0
     "--benchmark-disable",

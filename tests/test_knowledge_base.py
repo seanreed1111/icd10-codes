@@ -80,12 +80,12 @@ def test_save_parquet_has_expected_columns(saved_parquet: Path) -> None:
 
 
 def test_load_returns_knowledge_base(saved_parquet: Path) -> None:
-    loaded = KnowledgeBase.load(saved_parquet)
+    loaded = KnowledgeBase.load_from_parquet(saved_parquet)
     assert isinstance(loaded, KnowledgeBase)
 
 
 def test_load_file_path_set(saved_parquet: Path) -> None:
-    loaded = KnowledgeBase.load(saved_parquet)
+    loaded = KnowledgeBase.load_from_parquet(saved_parquet)
     assert loaded.file_path == saved_parquet
 
 
@@ -95,17 +95,17 @@ def test_load_file_path_set(saved_parquet: Path) -> None:
 
 
 def test_roundtrip_entry_count(kb: KnowledgeBase, saved_parquet: Path) -> None:
-    loaded = KnowledgeBase.load(saved_parquet)
+    loaded = KnowledgeBase.load_from_parquet(saved_parquet)
     assert len(loaded.entries) == len(kb.entries)
 
 
 def test_roundtrip_entries_are_icd10code(saved_parquet: Path) -> None:
-    loaded = KnowledgeBase.load(saved_parquet)
+    loaded = KnowledgeBase.load_from_parquet(saved_parquet)
     assert all(isinstance(e, ICD10Code) for e in loaded.entries)
 
 
 def test_roundtrip_codes_preserved(kb: KnowledgeBase, saved_parquet: Path) -> None:
-    loaded = KnowledgeBase.load(saved_parquet)
+    loaded = KnowledgeBase.load_from_parquet(saved_parquet)
     original_codes = [e.code for e in kb.entries]
     loaded_codes = [e.code for e in loaded.entries]
     assert loaded_codes == original_codes
@@ -114,19 +114,19 @@ def test_roundtrip_codes_preserved(kb: KnowledgeBase, saved_parquet: Path) -> No
 def test_roundtrip_descriptions_preserved(
     kb: KnowledgeBase, saved_parquet: Path
 ) -> None:
-    loaded = KnowledgeBase.load(saved_parquet)
+    loaded = KnowledgeBase.load_from_parquet(saved_parquet)
     for orig, reloaded in zip(kb.entries, loaded.entries, strict=True):
         assert reloaded.description == orig.description
 
 
 def test_roundtrip_category_preserved(kb: KnowledgeBase, saved_parquet: Path) -> None:
-    loaded = KnowledgeBase.load(saved_parquet)
+    loaded = KnowledgeBase.load_from_parquet(saved_parquet)
     for orig, reloaded in zip(kb.entries, loaded.entries, strict=True):
         assert reloaded.category == orig.category
 
 
 def test_roundtrip_chapter_preserved(kb: KnowledgeBase, saved_parquet: Path) -> None:
-    loaded = KnowledgeBase.load(saved_parquet)
+    loaded = KnowledgeBase.load_from_parquet(saved_parquet)
     for orig, reloaded in zip(kb.entries, loaded.entries, strict=True):
         assert reloaded.chapter == orig.chapter
 
@@ -134,14 +134,14 @@ def test_roundtrip_chapter_preserved(kb: KnowledgeBase, saved_parquet: Path) -> 
 def test_roundtrip_description_aliases_preserved(
     kb: KnowledgeBase, saved_parquet: Path
 ) -> None:
-    loaded = KnowledgeBase.load(saved_parquet)
+    loaded = KnowledgeBase.load_from_parquet(saved_parquet)
     for orig, reloaded in zip(kb.entries, loaded.entries, strict=True):
         assert reloaded.description_aliases == orig.description_aliases
 
 
 def test_roundtrip_specific_entry(saved_parquet: Path) -> None:
     """Spot-check a specific known row end-to-end."""
-    loaded = KnowledgeBase.load(saved_parquet)
+    loaded = KnowledgeBase.load_from_parquet(saved_parquet)
     entry = loaded.entries[2]  # A009
     assert entry.code == "A009"
     assert entry.description == "Cholera, unspecified"

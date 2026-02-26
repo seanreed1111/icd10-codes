@@ -6,7 +6,7 @@ RAW = Path("data/raw")
 PROCESSED = Path("data/processed")
 
 
-def main():
+def main() -> None:
     codes = pd.read_csv(RAW / "icd10cm-codes-April-1-2026.csv")
     categories = pd.read_csv(RAW / "icd10cm-categories-April-1-2026.csv")
 

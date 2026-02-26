@@ -45,7 +45,7 @@ indent-style = "space"
 
 [tool.ty.environment]
 python-version = "3.12"
-root = ["src"]
+root = ["src", "tests"]
 
 [tool.ty.rules]
 unresolved-import = "ignore"
@@ -55,5 +55,7 @@ replace-imports-with-any = ["bs4", "bs4.**", "lxml", "lxml.**", "pandas", "panda
 
 [dependency-groups]
 dev = [
+    "autotyping>=24.9.0",
+    "monkeytype>=23.3.0",
     "pre-commit>=4.5.1",
 ]

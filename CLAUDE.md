@@ -20,7 +20,7 @@ uv run python src/scripts/enrich_codes.py
 uv run python src/scripts/extract_icd10.py
 
 # Type check
-uv run ty check src/
+uv run ty check src/ tests/
 
 # Run tests (pytest is a dependency; no test files yet beyond test_data.json)
 uv run pytest

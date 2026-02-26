@@ -99,7 +99,7 @@ def _parse_lines(lines: list[str]) -> list[dict]:
     current_code: str | None = None
     desc_parts: list[str] = []
 
-    def _flush():
+    def _flush() -> None:
         if current_code:
             desc = clean_description(" ".join(desc_parts))
             if desc:

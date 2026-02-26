@@ -31,7 +31,7 @@ class ICD10Code:
 
 
 class KnowledgeBase:
-    def __init__(self, file_path: Path = CODES_FILE_PATH):
+    def __init__(self, file_path: Path = CODES_FILE_PATH) -> None:
         self.file_path: Path = file_path
         self.entries: list[ICD10Code] = self._construct_entries()
 
@@ -43,7 +43,9 @@ class KnowledgeBase:
             df = df.with_columns(pl.col("description").alias("description_aliases"))
         return [
             ICD10Code(code, description, description_aliases, category, chapter)
-            for code, description, description_aliases, category, chapter in zip(
+            for code, description, description_aliases, category, chapter in zip[
+                tuple[str, str, list[str], Category, Chapter]
+            ](
                 df["ICD10-CM-CODE"],
                 df["description"],
                 df["description_aliases"],

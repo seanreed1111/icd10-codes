@@ -54,14 +54,16 @@ def main() -> None:
     print("analyzer - word vs char_wb")
     print("=" * 60)
 
-    word_vec = TfidfVectorizer(analyzer="word")
+    word_vec = TfidfVectorizer(analyzer="word")  # default value
     word_vec.fit(descriptions)
     print(f"\nanalyzer='word':    {len(word_vec.get_feature_names_out())} features")
     print(f"  Sample: {list(word_vec.get_feature_names_out()[:8])}")
 
     char_vec = TfidfVectorizer(analyzer="char_wb", ngram_range=(3, 5))
     char_vec.fit(descriptions)
-    print(f"\nanalyzer='char_wb': {len(char_vec.get_feature_names_out())} features")
+    print(
+        f"\nanalyzer='char_wb': {len(char_vec.get_feature_names_out())} features using ngram_range=(3, 5)"
+    )
     print(f"  Sample: {list(char_vec.get_feature_names_out()[:8])}")
 
     # =============================================

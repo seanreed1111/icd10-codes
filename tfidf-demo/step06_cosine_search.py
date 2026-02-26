@@ -23,6 +23,7 @@ def main() -> None:
     # Fit on corpus
     vectorizer = TfidfVectorizer(ngram_range=(1, 2), stop_words="english")
     corpus_matrix = vectorizer.fit_transform(descriptions)
+    print(vectorizer.get_feature_names_out())
     print(f"Corpus: {corpus_matrix.shape[0]} docs, {corpus_matrix.shape[1]} features\n")
 
     def search(query: str, top_k: int = 5) -> list[dict]:
@@ -30,6 +31,7 @@ def main() -> None:
         query_vec = vectorizer.transform([query])
         scores = linear_kernel(query_vec, corpus_matrix).flatten()
         top_indices = scores.argsort()[-top_k:][::-1]
+        print(f"query: {query}\nTop indices: {top_indices}\n Scores: {scores}\n\n\n")
         return [
             {
                 "rank": rank + 1,

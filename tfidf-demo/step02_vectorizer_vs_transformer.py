@@ -37,7 +37,9 @@ def main() -> None:
     count_matrix = count_vec.fit_transform(descriptions)
     print(f"Count matrix shape: {count_matrix.shape}")
 
-    tfidf_transformer = TfidfTransformer(smooth_idf=True, sublinear_tf=False)
+    tfidf_transformer = TfidfTransformer(
+        smooth_idf=True, sublinear_tf=False
+    )  # default values
     matrix_b = tfidf_transformer.fit_transform(count_matrix)
     print(f"TF-IDF matrix shape: {matrix_b.shape}")
 

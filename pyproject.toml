@@ -56,9 +56,29 @@ unresolved-import = "ignore"
 [tool.ty.analysis]
 replace-imports-with-any = ["bs4", "bs4.**", "lxml", "lxml.**", "pandas", "pandas.**", "pdfplumber", "pdfplumber.**", "requests", "requests.**"]
 
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = [
+    # pytest-xdist: run tests in parallel across all available CPUs
+    "-n auto",
+    # pytest-html: generate a self-contained HTML report after each run
+    "--html=reports/report.html",
+    "--self-contained-html",
+    # pytest-benchmark: disable benchmarks in regular runs;
+    # re-enable ad hoc with: uv run pytest --benchmark-enable -n0
+    "--benchmark-disable",
+]
+
 [dependency-groups]
 dev = [
     "autotyping>=24.9.0",
     "monkeytype>=23.3.0",
     "pre-commit>=4.5.1",
+    "pytest-benchmark>=5.2.3",
+    "pytest-datadir>=1.8.0",
+    "pytest-datafiles>=3.0.1",
+    "pytest-html>=4.2.0",
+    "pytest-sugar>=1.1.1",
+    "pytest-xdist>=3.8.0",
 ]

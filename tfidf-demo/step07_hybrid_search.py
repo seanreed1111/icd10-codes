@@ -32,7 +32,7 @@ def main() -> None:
 
     print(f"Word features:     {word_matrix.shape[1]}")
     print(f"Char features:     {char_matrix.shape[1]}")
-    print(f"Combined features: {combined_matrix.shape[1]}\n")
+    print(f"Combined features: {combined_matrix.shape}\n")
 
     def search_hybrid(query: str, top_k: int = 5) -> list[dict]:
         q = hstack([word_vec.transform([query]), char_vec.transform([query])])

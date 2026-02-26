@@ -80,6 +80,7 @@ Ruff config lives in `pyproject.toml` under `[tool.ruff]`. `.venv` is listed in 
 
 ## Notes
 
-- `ty` (not mypy) is the type checker; config is in `pyproject.toml` under `[tool.ty]`. Several third-party packages (pandas, requests, bs4, etc.) are set to `replace-imports-with-any` to suppress unresolved-import errors.
+- Use **polars** for all data processing — do not use pandas.
+- `ty` (not mypy) is the type checker; config is in `pyproject.toml` under `[tool.ty]`. Several third-party packages (polars, requests, bs4, etc.) are set to `replace-imports-with-any` to suppress unresolved-import errors.
 - `enrich_codes.py` must be run from the project root because it uses relative paths (`data/raw/`, `data/processed/`).
 - Raw data files are sourced from the CDC NCHS ICD-10-CM April 1, 2026 release (effective April 1 – September 30, 2026).

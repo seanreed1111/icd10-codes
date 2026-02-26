@@ -74,6 +74,7 @@ addopts = [
 [dependency-groups]
 dev = [
     "autotyping>=24.9.0",
+    "deepeval>=3.8.8",
     "monkeytype>=23.3.0",
     "pre-commit>=4.5.1",
     "pytest-benchmark>=5.2.3",

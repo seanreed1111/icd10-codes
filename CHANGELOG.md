@@ -1,5 +1,19 @@
 # Changelog
 
+## [Unreleased] - 2026-02-27
+
+### Added
+
+- Add multi-label ICD-10 retrieval pipeline (`src/pipeline_v5.py`) — evaluates the system's ability to predict sets of diagnosis codes for full clinical notes using a sliding-window chunking approach over the 250-document CodiEsp dev split ([`95ec8e6`](https://github.com/seanreed1111/icd10-codes/commit/95ec8e6))
+- Add timestamped markdown evaluation reports saved to `results/` after each pipeline run — includes baseline table, parameter sweep sorted by F1 descending, and best configuration highlighted
+- Add parameter sweep across 27 configurations (`window`, `top_k`, `threshold`) reusing a single shared TF-IDF index for performance
+
+### Changed
+
+- Update README with pipeline documentation, parameters table, example console output, and updated project structure
+
+---
+
 ## [0.1.0](https://github.com/seanreed1111/icd10-codes/releases/tag/0.1.0) - 2026-02-26
 
 ### Added

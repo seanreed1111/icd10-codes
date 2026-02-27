@@ -1,12 +1,20 @@
 ---
 description: Review implementation plans for quality, completeness, and executability
-model: sonnet
+model: opus
 
 ---
 
 # Plan Review
 
 You are tasked with reviewing implementation plans to assess their quality, completeness, inconsistencies, ambiguity, and executability. Your goal is to provide constructive detailed feedback that helps improve plans before execution. The goal: any agent should be able to execute the plan without further questions to the user or any further user input. 
+
+## When to Use
+
+Invoke this command when you need to:
+- Review an implementation plan before execution
+- Assess plan quality, completeness, and clarity
+- Identify potential blockers or ambiguities
+- Validate that a plan is ready for agent execution
 
 ## Initial Response
 

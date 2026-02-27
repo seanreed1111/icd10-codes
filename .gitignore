@@ -45,7 +45,6 @@ __pypackages__/
 
 # uv
 .uv/
-# !uv.lock          # remove this line if you want to commit uv.lock
 
 # ── Testing & coverage ────────────────────────────────────────────────────────
 .tox/

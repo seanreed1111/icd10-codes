@@ -105,7 +105,8 @@
       "WebFetch(domain:www.capitalone.com)",
       "Bash(do echo:*)",
       "Bash(PYTHONPATH=src uv run:*)",
-      "Bash(shuf:*)"
+      "Bash(shuf:*)",
+      "Bash(python3:*)"
     ]
   }
 }

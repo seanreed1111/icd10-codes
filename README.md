@@ -179,7 +179,88 @@ for r in results:
 | `top_k` larger than corpus | Returns at most as many results as there are codes with non-zero score |
 | Query with no matching tokens | Returns `[]` |
 
-### 4. Extract codes from external sources (optional)
+### 4. Multi-label evaluation pipeline
+
+`src/pipeline_v5.py` evaluates the retrieval system's ability to predict **sets** of ICD-10-CM codes for full clinical notes. It runs over the 250-document CodiEsp dev split and reports macro-averaged precision, recall, and F1.
+
+#### How it works
+
+The pipeline runs each document through five steps:
+
+1. **Load** — reads the `.txt` clinical note from disk
+2. **Clean** — collapses whitespace, lowercases
+3. **Chunk** — splits into overlapping sliding-window sentence chunks (configurable window size and stride)
+4. **Retrieve** — runs TF-IDF search on each chunk, aggregates scores across chunks, applies a vote filter and a score threshold
+5. **Evaluate** — computes per-document precision/recall/F1, then macro-averages across all 250 documents
+
+Three-character category codes are discarded throughout. Only 4–7 character billable codes appear in predictions and ground truth.
+
+#### Running the evaluation
+
+```bash
+# From project root — takes 5–15 minutes
+uv run python src/pipeline_v5.py
+```
+
+The script:
+1. Loads the KB (74,719 codes) and builds the TF-IDF index **once**
+2. Runs a **baseline** config (default parameters)
+3. Runs a **27-config parameter sweep** over `window ∈ {2,3,5}`, `top_k ∈ {5,10,20}`, `threshold ∈ {0.03,0.05,0.08}` — reusing the same index throughout
+4. Prints a `Best:` summary line to stdout
+5. Saves a timestamped markdown report to `results/`
+
+Console output looks like:
+
+```
+========================================================================
+Multi-Label ICD-10 Retrieval - v5 Evaluation
+========================================================================
+Documents: 250
+KB size: 74,719
+
+Building TF-IDF index...
+
+--- Baseline ---
+Baseline                                  P=0.0371  R=0.2207  F1=0.0608
+
+--- Parameter Sweep ---
+  w=2 k=5 t=0.03                          P=0.0496  R=0.1903  F1=0.0746
+  ...
+
+Best: w=5 k=5 t=0.03  P=0.0622  R=0.1350  F1=0.0780
+
+Results saved → results/pipeline_v5_20260227_143022.md
+```
+
+#### Markdown report
+
+Each run writes a new file to `results/pipeline_v5_<timestamp>.md` containing:
+
+- **Run metadata** — date/time, document count, KB size
+- **Baseline table** — single row with default parameters
+- **Parameter sweep table** — all 27 configs sorted by F1 descending, so the best configs float to the top
+- **Best configuration** — highlighted table with the winning parameters and bolded metrics
+
+```
+results/
+  pipeline_v5_20260227_143022.md   ← one file per run, timestamped
+  pipeline_v5_20260227_160011.md
+  ...
+```
+
+#### Tunable parameters
+
+| Parameter | Default | Effect |
+|-----------|---------|--------|
+| `window` | 3 | Sentences per sliding-window chunk |
+| `stride` | 2 | Step between chunk starts; `stride < window` creates overlap |
+| `top_k_per_chunk` | 10 | Candidate codes retrieved per chunk |
+| `min_chunk_score` | 0.04 | Per-chunk cosine score floor; hits below this are discarded |
+| `min_votes` | 1 | A code must appear in ≥ this many chunks to survive |
+| `aggregation` | `"max"` | How chunk scores are combined (`"max"`, `"mean"`, `"sum"`) |
+| `final_threshold` | 0.04 | Aggregated score must exceed this to enter the prediction set |
+
+### 5. Extract codes from external sources (optional)
 
 Scrapes additional codes from a website and two PDFs (Optum, LTC coding guides):
 
@@ -228,9 +309,14 @@ data/
     icd10_codes-simplified.csv            # Smaller set from extract_icd10.py
   processed/
     icd10cm-codes-enriched-April-1-2026.csv  # Joined output used by KnowledgeBase
+  test-datasets/
+    codiesp/                              # CodiEsp CLEF eHealth 2020 dev split
+results/
+  pipeline_v5_<timestamp>.md             # Evaluation reports (one per run)
 src/
   cli.py                 # Typer CLI — `search` command with --top-k and --siblings flags
   knowledge_base.py      # KnowledgeBase, ICD10Code, Category, Chapter dataclasses
+  pipeline_v5.py         # Multi-label evaluation pipeline with parameter sweep
   retriever.py           # TfidfRetriever, SearchResult, SearchResultWithSiblings
   scripts/
     enrich_codes.py      # Joins codes → categories → writes processed CSV
